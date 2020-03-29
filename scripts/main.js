@@ -19,7 +19,8 @@ $(document).ready(function() {
   });
 
   var navHtml2 = "";
-  var navHtml = $.get("partials/nav.html", function(data) {navHtml2 = data;});
+  var navHtml = $.get("partials/nav.html");
+  $.get("partials/nav.html", function(data) {navHtml2 = data;});
   console.log(navHtml);
   console.log(navHtml2);
 
