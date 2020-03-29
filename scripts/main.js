@@ -20,11 +20,12 @@ $(document).ready(function() {
 
   var navHtml2 = "";
   var navHtml = $.get("partials/nav.html");
-  $.get("partials/nav.html", function(data) {navHtml2 = data;});
+  $.get("partials/nav.html", function(data) {$('nav').append(data);});
   console.log(navHtml);
   console.log(navHtml2);
+  console.log('test1');
 
-  $('nav').append(navHtml2);
+
 
   function positionFooter () {
     $(".main").css('height', '');
