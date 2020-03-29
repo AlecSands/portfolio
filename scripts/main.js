@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //Set parameters for cards
   $('.single-item').slick({
     dots: true,
     slidesToShow: 3,
@@ -18,15 +19,13 @@ $(document).ready(function() {
     ]
   });
 
-  var navHtml2 = "";
-  var navHtml = $.get("partials/nav.html");
+
+  //Using partial to load header and footer html
   $.get("partials/nav.html", function(data) {$('nav').append(data);});
-  console.log(navHtml);
-  console.log(navHtml2);
-  console.log('test1');
+  $.get("partials/footer.html", function(data) {$('footer').append(data);});
 
 
-
+  //Postion footer based on window height
   function positionFooter () {
     $(".main").css('height', '');
     var contentHeight = $(".main").height();
