@@ -19,9 +19,9 @@ $(document).ready(function() {
   });
 
   var navHtml = $.get("partials/nav.html", function(data) {alert(data);});
-  console.log(navHtml);
+  console.log(navHtml.responseText);
 
-  $('nav').append(navHtml);
+  $('nav').append(navHtml.responseText);
 
   function positionFooter () {
     $(".main").css('height', '');
