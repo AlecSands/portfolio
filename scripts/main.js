@@ -18,10 +18,10 @@ $(document).ready(function() {
     ]
   });
 
-  var navHtml = $.get("partials/nav.html", function(data) {alert(data);});
-  console.log(navHtml.responseText);
+  var navHtml = $.get("partials/nav.html", function(data) {return data;});
+  console.log(navHtml);
 
-  $('nav').append(navHtml.responseText);
+  $('nav').append(navHtml);
 
   function positionFooter () {
     $(".main").css('height', '');
